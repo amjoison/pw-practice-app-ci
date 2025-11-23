@@ -5,7 +5,7 @@ test.beforeEach(async({page}) => {
     await page.getByText('Button Triggering AJAX Request').click()
 })
 
-test('auto waiting', async({page}) => {
+test.only('auto waiting', async({page}) => {
     const successButton = page.locator('.bg-success')
 
     await successButton.waitFor({state: "attached"})
